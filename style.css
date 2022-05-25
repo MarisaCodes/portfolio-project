@@ -5,7 +5,7 @@ html {
 }
 
 #back-ground-image {
-  background: rgb(68, 68, 68) url(/project-1-part-1/background.jpg);
+  background: rgb(68, 68, 68) url(background.jpg);
   /* width: 100%; */
   z-index: -1;
   background-attachment: fixed;
