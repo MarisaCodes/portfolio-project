@@ -37,7 +37,6 @@ main {
   top: 3em;
   right: 2.5em;
   margin-bottom: 11.5em;
-  cursor: pointer;
   align-items: end;
 }
 div#btn button {
@@ -49,12 +48,15 @@ div#btn button {
 }
 div#btn button#btn-1 {
   grid-row: 1/2;
+  cursor: pointer;
 }
 div#btn button#btn-2 {
   grid-row: 2/3;
+  cursor: pointer;
 }
 div#btn button#btn-3 {
   grid-row: 3/4;
+  cursor: pointer;
 }
 
 #content {
