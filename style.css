@@ -18,6 +18,7 @@ main {
   font-family: inherit;
   vertical-align: baseline;
 }
+
 #back-ground-image {
   background: rgb(138, 138, 138) url(background.jpg);
   /* width: 100%; */
@@ -39,26 +40,25 @@ main {
   margin-bottom: 11.5em;
   align-items: end;
 }
-div#btn button {
+div#btn div {
   margin: 0;
   width: 2em;
   padding: 0;
+  background-color: white;
   border: 0.1em solid white;
-  border-radius: 0%;
 }
-div#btn button#btn-1 {
+div#btn div:hover {
+  cursor: pointer;
+}
+div#btn div#btn-1 {
   grid-row: 1/2;
-  cursor: pointer;
 }
-div#btn button#btn-2 {
+div#btn div#btn-2 {
   grid-row: 2/3;
-  cursor: pointer;
 }
-div#btn button#btn-3 {
+div#btn div#btn-3 {
   grid-row: 3/4;
-  cursor: pointer;
 }
-
 #content {
   display: grid;
   grid-template-columns: 1fr;
@@ -111,10 +111,9 @@ div.icon-bar a > img {
   margin-right: 0.5em;
 }
 div.icon-bar img:hover {
-  opacity: 0.4;
-  transition: 300ms;
+  transition: 200ms;
   background: #eece1a;
-  border-radius: 100%;
+  border-radius: 50000em;
 }
 
 @media only screen and (max-width: 666px) {
@@ -132,5 +131,13 @@ div.icon-bar img:hover {
   }
   div.shadow-background {
     text-align: center;
+  }
+}
+@media only screen and (max-width: 342px) {
+  div.the-name {
+    font-size: 1.5em;
+  }
+  #content > div.shadow-background {
+    font-size: 1em;
   }
 }
