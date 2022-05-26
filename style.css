@@ -3,15 +3,29 @@ html {
   margin: 0;
   height: 100%;
 }
-
+h1,
+body,
+html,
+h2,
+main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
 #back-ground-image {
-  background: rgb(68, 68, 68) url(background.jpg);
+  background: rgb(138, 138, 138) url(background.jpg);
   /* width: 100%; */
   z-index: -1;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 100em rgba(68, 68, 68, 0.8);
+  box-shadow: inset 0 0 0 90000em rgba(68, 68, 68, 0.6);
 }
 /* div.the-name {
   width: 100%;
@@ -36,25 +50,108 @@ div.icon {
 div.icon img#github {
   margin: 0 auto;
 } */
-#content {
+#btn {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  margin: 0 auto;
+  gap: 0.3em;
+  justify-items: right;
+  position: relative;
+  top: 3em;
+  right: 2.5em;
+  margin-bottom: 11.5em;
+  cursor: pointer;
+  align-items: end;
 }
-div.the-name {
-  margin: 0 auto;
-  font-size: 5em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: white;
+div#btn button {
+  margin: 0;
+  width: 2em;
+  padding: 0;
+  border: 0.1em solid white;
+  border-radius: 0%;
+}
+div#btn button#btn-1 {
+  grid-row: 1/2;
+}
+div#btn button#btn-2 {
+  grid-row: 2/3;
+}
+div#btn button#btn-3 {
+  grid-row: 3/4;
 }
 
-div.the-name span.last-name {
-  color: yellow;
+#content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: min-content;
+  gap: 0.5em;
+  padding: 0;
+  margin: 0 auto;
 }
+
+div.the-name {
+  grid-row: 1/2;
+  /* align-items: right; */
+  display: inline-block;
+  margin-left: 1em;
+  font-size: 4.8em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+#content > div.the-name > h1 {
+  display: inline-block;
+}
+div.the-name span.last-name {
+  color: #eece1a;
+}
+#content > div.shadow-background {
+  grid-row: 2/3;
+  font-weight: 400;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 1.7em;
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(73, 73, 73, 0.5);
+  color: white;
+}
+#content > div.shadow-background > h2 {
+  display: inline-block;
+  position: relative;
+  top: 0.1rem;
+  left: 1rem;
+}
+div.icon-bar {
+  grid-row: 3/4;
+  display: inline-block;
+  margin-top: 2em;
+  margin-left: 4.5em;
+}
+div.icon-bar a > img {
+  margin-right: 0.5em;
+}
+div.icon-bar img:hover {
+  opacity: 0.4;
+  transition: 300ms;
+  background: #eece1a;
+  border-radius: 100%;
+}
+
 @media only screen and (max-width: 666px) {
   div.the-name span.last-name {
     display: block;
     line-height: 1;
+  }
+  div.icon-bar {
+    text-align: center;
+    margin: 0;
+    margin-top: 1em;
+  }
+  div.icon-bar a > img {
+    margin: 0;
+  }
+  div.shadow-background {
+    text-align: center;
   }
 }
