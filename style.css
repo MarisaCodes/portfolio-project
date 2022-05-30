@@ -103,6 +103,7 @@ div.the-name span.last-name {
   top: 0.1rem;
   left: 1rem;
 }
+/* github and linkedin icons */
 div.icon-bar {
   grid-row: 3/4;
   display: inline-block;
@@ -115,7 +116,7 @@ div.icon-bar a > img {
 }
 div.icon-bar img:hover {
   transition: 200ms;
-  box-shadow: inset 0 0 0 500em #eece1a;
+  background-color: #eece1a;
   border-radius: 50000em;
 }
 
