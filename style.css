@@ -121,6 +121,7 @@ div#menu-page div#menu-header {
   z-index: -2;
 }
 div#menu-page img {
+  border: 3px solid #eece1a;
   border-radius: 50%;
   width: 20%;
   display: flex;
