@@ -450,6 +450,7 @@ div#project-card-container div.project-description {
   background-color: rgb(206, 206, 206);
   color: black;
   text-align: center;
+  padding: 0.2em;
 }
 img#tennis-logo {
   width: 100%;
