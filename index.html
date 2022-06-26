@@ -21,42 +21,56 @@
           </svg>
         </span>
         <div id="menu-page">
-          <span id="exit-icon">
-            <svg
-              id="exit-icon-svg"
-              xmlns="http://www.w3.org/2000/svg"
-              height="48"
-              width="48"
-            >
-              <path
-                d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z"
-              />
-            </svg>
-          </span>
-          <ul>
-            <li id="home-page">
-              <a href=""><i class="fas fa-home nav-icon"></i>Home</a>
+          <img
+              src="https://i.ibb.co/w0mTqVq/tumblr-pou7rnhr1-G1t6ohc9o1-1280.png"
+              alt="profile image of website owner"
+            />
+          <div id="menu-header">
+            <span id="exit-icon">
+              <svg
+                id="exit-icon-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                height="48"
+                width="48"
+              >
+                <path
+                  d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z"
+                />
+              </svg>
+            </span>
+          </div>
+          <ul id="menu-txt">
+            <li>
+              <a href="index.html" class="active"
+                ><i class="fas fa-home nav-icon"></i>Home</a
+              >
             </li>
             <li>
               <br />
               <br />
             </li>
-            <li id="home-page">
-              <a href=""><i class="fa-solid fa-id-card-clip"></i>About me</a>
+            <li>
+              <a href="about.html"
+                ><i class="fa-solid fa-id-card-clip"></i>About me</a
+              >
             </li>
             <li>
               <br />
               <br />
             </li>
-            <li id="home-page">
-              <a href=""><i class="fa-solid fa-laptop-file"></i>My Work</a>
+            <li>
+              <a href="mywork.html"
+                ><i class="fa-solid fa-laptop-file"></i>My Work</a
+              >
             </li>
             <li>
               <br />
               <br />
             </li>
-            <li id="home-page">
-              <a href=""><i class="fa-solid fa-comment"></i>How to Reach me</a>
+            <li>
+              <a href="contact.html"
+                ><i class="fa-solid fa-comment"></i>How to Reach me</a
+              >
             </li>
           </ul>
         </div>
@@ -99,21 +113,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      const showMenu = document.querySelector("#menu-svg-icon");
-      const menuPage = document.querySelector("#menu-page");
-      const hideMenu = document.querySelector("#exit-icon-svg");
-      const makeTransparent = document.querySelector("#menu-svg-icon");
-
-      showMenu.addEventListener("click", function () {
-        menuPage.classList.add("active");
-        makeTransparent.classList.add("active");
-      });
-
-      hideMenu.addEventListener("click", function () {
-        menuPage.classList.remove("active");
-        makeTransparent.classList.remove("active");
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

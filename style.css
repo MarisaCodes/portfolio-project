@@ -35,11 +35,15 @@ main {
   background-repeat: no-repeat;
   box-shadow: inset 0 0 0 90000em rgba(68, 68, 68, 0.6);
 }
-/* button styling */
+/* svg burger menu icon styling */
 span#icon-menu {
   float: right;
   fill: white;
   padding: 0.5em;
+}
+svg#menu-svg-icon {
+  position: fixed;
+  right: 0;
 }
 svg#menu-svg-icon.active {
   fill: transparent;
@@ -47,6 +51,8 @@ svg#menu-svg-icon.active {
 span#icon-menu svg#menu-svg-icon {
   box-sizing: content-box;
   padding: 0.3em;
+  margin-right: 1.5em;
+  margin-top: 1.5em;
 }
 span#icon-menu svg#menu-svg-icon:hover {
   background-color: rgba(151, 151, 151, 0.15);
@@ -57,6 +63,7 @@ div#icon-container {
   /* padding: 3em; */
   padding-bottom: 10em;
 }
+
 /* menu page styling*/
 div#menu-page {
   position: fixed;
@@ -65,7 +72,6 @@ div#menu-page {
   height: 100%;
   padding-right: 4em;
   padding-top: 3em;
-  padding-bottom: 100%;
   background-color: rgba(49, 49, 49, 0.8);
   z-index: 1;
   transition: 350ms;
@@ -97,33 +103,60 @@ div#menu-page ul li a:hover {
   color: #eece1a;
   transition: 300ms;
 }
+div#menu-page ul li a.active {
+  color: #eece1a;
+}
 div#menu-page i {
   padding-right: 0.4em;
 }
+/* menu header styling */
+div#menu-page div#menu-header {
+  padding-left: 100%;
+  padding-right: 100%;
+  padding-bottom: 20%;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  background-color: rgba(211, 211, 211, 0.4);
+  z-index: -2;
+}
+div#menu-page img {
+  border-radius: 50%;
+  width: 20%;
+  display: flex;
+  margin: 0 auto;
+  margin-right: 35%;
+}
+@media only screen and (min-width: 768px) {
+  div#menu-page div#menu-header {
+    padding-bottom: 14%;
+  }
+  div#menu-page ul {
+    padding-top: 2em;
+    padding-bottom: 20em;
+  }
+  div#menu-page img {
+    width: 15%;
+    display: flex;
+    margin: 0 auto;
+    margin-right: 40%;
+  }
+}
+/* x mark exit icon styling */
 svg#exit-icon-svg {
+  margin-top: 1.5em;
+  margin-right: 1.5em;
   fill: white;
   float: right;
-  position: absolute;
-  right: 0.7em;
+  position: relative;
+  right: 5em;
   top: 0.8em;
 }
 svg#exit-icon-svg:hover {
   cursor: pointer;
 }
-/* title and main text */
-#content {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-rows: min-content;
-  gap: 0.5em;
-  padding: 0;
-  margin: 0 auto;
-}
-
+/* main content styling */
 div.the-name {
-  grid-row: 1/2;
-  /* align-items: right; */
   display: inline-block;
   margin-left: 1em;
   font-size: 4.8em;
@@ -138,7 +171,6 @@ div.the-name span.last-name {
   color: #eece1a;
 }
 #content > div.shadow-background {
-  grid-row: 2/3;
   font-weight: 400;
   font-size: 30px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -167,7 +199,7 @@ div.icon-bar a:hover {
   fill: #eece1a;
   cursor: pointer;
 }
-
+/* media queries for smaller screens */
 @media only screen and (max-width: 666px) {
   div.the-name span.last-name {
     text-align: center;
@@ -190,5 +222,306 @@ div.icon-bar a:hover {
   }
   #content > div.shadow-background {
     font-size: 1em;
+  }
+}
+
+/* about me page styling */
+
+/*reset*/
+body#about-me {
+  background: rgb(65, 65, 65);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+/*title*/
+h1#title {
+  font-size: 4.8em;
+  padding-top: 1.3em;
+}
+h1#title {
+  text-align: center;
+}
+h1#title span {
+  color: #eece1a;
+}
+/*grey bar with text*/
+div.bio-info {
+  font-size: 1.5em;
+  padding: 0.2em;
+  background-color: rgba(0, 0, 0, 0.2);
+  max-width: 20em;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+div.bio-info p {
+  margin: 0;
+}
+/*profile image*/
+
+div.bio img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 30%;
+  border-radius: 50%;
+  border: 3px solid #eece1a;
+}
+/* div and ps with the bio text*/
+div.bio {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5em;
+}
+p.bio-text {
+  font-size: 1.5em;
+  line-height: 1.4em;
+}
+p.bio-title {
+  color: #eece1a;
+  font-size: 1.8em;
+}
+/*the project description cards*/
+div.cards div.card-one {
+  border-top: 5px solid #eece1a;
+}
+div.cards div.card-one {
+  background-color: rgba(211, 211, 211, 0.1);
+  padding: 1em;
+  max-width: 75%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+div.cards h2 {
+  text-align: center;
+  font-size: 1.5em;
+}
+div.cards h3 {
+  font-size: 1em;
+  text-align: center;
+  margin-top: 2em;
+}
+div.cards div.text {
+  font-size: 0.85em;
+  text-align: center;
+}
+div.cards div.last-para {
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 1.5em;
+}
+div.cards div.edu {
+  padding-top: 1.5em;
+  text-align: center;
+}
+/*grey bar with copyright*/
+div.copy {
+  background-color: rgba(0, 0, 0, 0.54);
+  margin-top: 2em;
+  padding: 2em;
+  color: white;
+  text-align: center;
+}
+
+/*media queries for larger screens*/
+@media only screen and (min-width: 768px) {
+  /*main title*/
+  h1#title {
+    text-align: left;
+    margin-left: 1.5em;
+  }
+  /* grey text bar */
+  div.bio-info {
+    font-size: 1.5em;
+    padding: 0.2em;
+    background-color: rgba(0, 0, 0, 0.2);
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+  div.bio-info p {
+    margin: 0;
+    padding-left: 0.5em;
+  }
+  /*profile image*/
+  div.bio img {
+    width: 30%;
+    border-radius: 50%;
+    float: left;
+    margin-right: 3em;
+  }
+  /*div and ps with bio text*/
+  p.bio-text {
+    margin-right: 0;
+    text-align: left;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    text-align: justify;
+  }
+  p.bio-title {
+    color: #eece1a;
+    font-size: 1.8em;
+    text-align: left;
+  }
+  div.bio {
+    margin-right: 8%;
+    margin-bottom: 10%;
+  }
+  /* cards project description */
+  div.cards {
+    display: flex;
+    justify-content: center;
+  }
+  div.cards div.card-one {
+    max-width: 30%;
+  }
+  div.cards div.education {
+    margin-right: 6%;
+  }
+  div.cards h2 {
+    text-align: start;
+    font-size: 1.3em;
+  }
+  div.cards h3 {
+    font-size: 1em;
+    text-align: start;
+    margin-top: 2em;
+  }
+  div.cards div.text {
+    font-size: 0.9em;
+    text-align: start;
+    line-height: 1.3em;
+  }
+  div.cards div.last-para {
+    font-size: 0.8em;
+    text-align: start;
+    margin-top: 1.5em;
+  }
+  div.cards div.edu {
+    padding-top: 1.5em;
+    text-align: center;
+  }
+}
+
+/* my work page styling */
+
+/* styling the project cards */
+div#project-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+  row-gap: 2em;
+  margin-right: 5em;
+  margin-left: 5em;
+  margin-top: 2em;
+  align-items: start;
+}
+div#project-container {
+  display: grid;
+  gap: 0.4em;
+}
+div#project-card-container div.project-card {
+  border: 3px solid white;
+}
+div#project-card-container div.project-card:hover {
+  border: 3px solid #eece1a;
+}
+div#project-card-container div.project-name {
+  background-color: rgb(206, 206, 206);
+  color: black;
+  padding: 0.4em;
+  text-align: center;
+  transition: 400ms;
+}
+div#project-card-container div.project-name:hover {
+  background-color: #eece1a;
+  cursor: pointer;
+  transition: 400ms;
+}
+div#project-card-container div.project-description {
+  background-color: rgb(206, 206, 206);
+  color: black;
+  text-align: center;
+}
+img#tennis-logo {
+  width: 100%;
+  height: 100%;
+}
+i.fa-eye {
+  padding-left: 0.2em;
+  padding-right: 0.3em;
+}
+img#nuxt {
+  width: 100%;
+  height: 100%;
+}
+img#reddit {
+  width: 100%;
+  height: 100%;
+}
+img#d3js {
+  width: 100%;
+  height: 100%;
+}
+/* media queries for cards in larger screen*/
+
+@media only screen and (min-width: 768px) {
+  div#project-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5em;
+    row-gap: 2em;
+    margin-right: 5em;
+    margin-left: 5em;
+    margin-top: 2em;
+    align-items: start;
+  }
+}
+
+/* how to reach me,contact page styling */
+
+div.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 2em;
+}
+div.contact {
+  border: 3px solid white;
+  padding: 1.5em;
+  font-size: 1.5em;
+}
+div.contact div.text-color {
+  color: #eece1a;
+  display: inline;
+}
+div.contact:hover > div.text-color,
+div.contact:hover {
+  background-color: #eece1a;
+  color: black;
+}
+/* media queries for contact detials larger screen */
+
+@media only screen and (min-width: 768px) {
+  div.contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 5em;
+    margin-right: 5em;
+    gap: 3em;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 2em;
+  }
+  div.adress {
+    margin: 0 auto;
   }
 }
